@@ -33,8 +33,10 @@ class App extends Component {
         </header>
         <Router>
           <Route path="/about" component={About} />
-          <Route path="/contact" component={Contact} />
-          {/* <Todos todos={this.state.todos} /> */}
+          <Route path="/contact" component={Contact} />            
+          <Route path="/todos" render={() => (
+            <Todos todos={this.state.todos} />
+          )} />
 
         </Router>
       </div>
