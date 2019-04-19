@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Todos from './components/Todos';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import About  from './components/About';
 import Contact from './components/Contact';
 
@@ -28,10 +28,13 @@ class App extends Component {
     // console.log(this.state.todos);
     return (
       <div className="App">
+        <Router>
         <header className="App-header">
           Le routage
+          <Link to={'/todos'}>A faire</Link>
+          <Link to="/about">A propos</Link>
+          <Link to="/contact">Contact</Link> 
         </header>
-        <Router>
           <Route path="/about" component={About} />
           <Route path="/contact" component={Contact} />            
           <Route path="/todos" render={() => (
