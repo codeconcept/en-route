@@ -4,6 +4,7 @@ import Todos from './components/Todos';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import About  from './components/About';
 import Contact from './components/Contact';
+import TodoDetails from './components/TodoDetails';
 
 class App extends Component {
   state = {
@@ -40,6 +41,7 @@ class App extends Component {
           <Route path="/todos" render={() => (
             <Todos todos={this.state.todos} />
           )} />
+          <Route path="/todos/:id" component={TodoDetails}/>
 
         </Router>
       </div>
