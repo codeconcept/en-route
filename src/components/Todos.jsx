@@ -1,12 +1,13 @@
 import React from 'react';
 
 const Todos = ({todos}) => {
+  console.log(todos);
   return (
     <div>
       <ul>
-        <li>aze</li>
-        <li>qsd</li>
-        <li>wxc</li>
+        {todos && todos.map(todo => (
+          <li key={todo.id}>{todo.title}</li>
+        ))}
       </ul>
     </div>
   );

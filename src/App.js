@@ -22,13 +22,13 @@ class App extends Component {
   }
   
   render() {
-    console.log(this.state.todos);
+    // console.log(this.state.todos);
     return (
       <div className="App">
         <header className="App-header">
           Le routage
         </header>
-        <Todos />
+        <Todos todos={this.state.todos} />
       </div>
     );
   }
